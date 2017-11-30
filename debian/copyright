@@ -1,0 +1,9 @@
+Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
+Name: mumlib
+Maintainer: Scott Hardin <scott@hnsc.de>
+Source: https://github.com/mrscotty/mumlib
+
+Files: *
+Copyright: 2015 Michał Słomkowski
+           2017 Scott Hardin
+License: LGPL-3
