@@ -26,7 +26,7 @@ git archive --output=$builddir/$origtarball HEAD
 (cd $builddir/$buildname && dpkg-buildpackage -us -uc)
 
 DEB_PKG=$builddir/mumlib_${upstream_version}-${downstream_version}_$downstream_arch.deb \
-    prove build/t/*.t
+    prove debian/t/*.t
 
 
 
