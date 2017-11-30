@@ -3,7 +3,6 @@ Section: libs
 Priority: optional
 Maintainer: Scott Hardin <scott@hnsc.de>
 Build-Depends: debhelper (>= 9), cmake, libboost-all-dev, libssl, libssl-dev, liblog4cpp5, liblog4cpp5-dev, libopus-dev, libprotobuf-dev, protobuf-compiler
-Depends: libboost-iostreams1.55.0, libboost-log1.55.0, libssl, libssl-dev, liblog4cpp5, libopus0, libprotobuf9
 Standards-Version: 3.9.5
 Homepage: http://github.com/mrscotty/mumlib
 #Vcs-Git: git://anonscm.debian.org/collab-maint/mumlib.git
@@ -11,7 +10,7 @@ Homepage: http://github.com/mrscotty/mumlib
 
 Package: mumlib
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-iostreams1.55.0, libboost-log1.55.0, libssl, libssl-dev, liblog4cpp5, libopus0, libprotobuf9
 Description: mumlib - simple Mumble client library
  Fairy simple Mumble library written in C++, using *boost::asio*
  asynchronous networking framework. Library supports:
