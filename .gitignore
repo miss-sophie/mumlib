@@ -32,3 +32,5 @@ build/
 # IntelliJ
 *.iml
 .idea/
+*.ex
+*.EX

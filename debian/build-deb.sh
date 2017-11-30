@@ -3,6 +3,7 @@
 # package/build-deb.sh - build the debian package
 
 set -e
+set -x
 
 pkgname=mumlib
 upstream_major=$(perl -ne 'm{mumlib_VERSION_MAJOR\s+(\d+)} && print $1' CMakeLists.txt)
@@ -16,7 +17,7 @@ downstream_version=1
 downstream_arch=amd64
 
 origname=${source_package}_${upstream_version}
-origtarbal=$origname.orig.tar.gz
+origtarball=$origname.orig.tar.gz
 
 rm -rf $builddir
 mkdir -p $builddir/$buildname
