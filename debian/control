@@ -10,7 +10,7 @@ Homepage: http://github.com/mrscotty/mumlib
 
 Package: mumlib
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-iostreams1.55.0, libboost-log1.55.0, libssl1.0.0, libssl-dev, liblog4cpp5v5, libopus0, libprotobuf9
+Depends: ${shlibs:Depends}, ${misc:Depends} 
 Description: mumlib - simple Mumble client library
  Fairy simple Mumble library written in C++, using *boost::asio*
  asynchronous networking framework. Library supports:
