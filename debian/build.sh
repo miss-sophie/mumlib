@@ -28,5 +28,8 @@ git archive --output=$builddir/$origtarball HEAD
 DEB_PKG=$builddir/mumlib_${upstream_version}-${downstream_version}_$downstream_arch.deb \
     prove debian/t/*.t
 
+echo "DEBUG: PWD=$PWD"
+echo "DEBUG: find . -name \*.rpm"
+find . -name \*.rpm
 
 
