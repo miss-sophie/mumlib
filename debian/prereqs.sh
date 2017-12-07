@@ -5,6 +5,16 @@
 set -e
 set -x
 
+dist="$1"
+proxy="$2"
+
+if [ -n "$proxy" ]; then
+   export HTTP_PROXY=$proxy
+   export HTTPS_PROXY=$proxy
+   export http_proxy=$proxy
+   export https_proxy=$proxy
+fi
+
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
 
@@ -30,7 +40,7 @@ prereqs_ubuntu () {
         protobuf-compiler pkg-config
 }
 
-case "$1" in
+case "$dist" in
     debian)
         prereqs_debian
         ;;
@@ -39,7 +49,7 @@ case "$1" in
         ;;
     *)
         echo "ERROR: Argument required" >&2
-        echo "       Usage: $0 <debian|ubuntu>" >&2
+        echo "       Usage: $0 <debian|ubuntu> [<apt-cache-proxy>]" >&2
         exit 1
         ;;
 esac
