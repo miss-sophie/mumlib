@@ -26,7 +26,8 @@ prereqs_debian () {
         libssl1.0.2 libssl1.0-dev \
         liblog4cpp5v5 liblog4cpp5-dev \
         libopus-dev libprotobuf-dev \
-        protobuf-compiler pkg-config
+        protobuf-compiler pkg-config \
+        git
 }
 
 prereqs_ubuntu () {
