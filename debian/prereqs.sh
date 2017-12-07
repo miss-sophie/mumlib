@@ -18,11 +18,12 @@ fi
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
 
+# 'Tuned' for Debian Stretch 2017-12
 prereqs_debian () {
     apt-get install -y \
         cmake libboost-all-dev \
         debhelper \
-        libssl1.0.0 libssl-dev \
+        libssl1.0.2 libssl1.0-dev \
         liblog4cpp5v5 liblog4cpp5-dev \
         libopus-dev libprotobuf-dev \
         protobuf-compiler pkg-config
