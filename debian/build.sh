@@ -5,6 +5,9 @@
 set -e
 set -x
 
+echo "DEBUG: PWD=$PWD" >&2
+echo "DEBUG: ls -la - $(ls -la)" >&2
+
 pkgname=mumlib
 upstream_major=$(perl -ne 'm{mumlib_VERSION_MAJOR\s+(\d+)} && print $1' CMakeLists.txt)
 upstream_minor=$(perl -ne 'm{mumlib_VERSION_MINOR\s+(\d+)} && print $1' CMakeLists.txt)
@@ -30,7 +33,6 @@ DEB_PKG=$builddir/mumlib_${upstream_version}-${downstream_version}_$downstream_a
 
 mv $builddir/mumlib_${upstream_version}-${downstream_version}_$downstream_arch.deb .
 
-echo "DEBUG: PWD=$PWD"
 echo "DEBUG: find . -name \*.deb"
 find . -name \*.deb
 
