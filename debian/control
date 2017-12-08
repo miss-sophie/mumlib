@@ -2,13 +2,10 @@ Source: mumlib
 Section: libs
 Priority: optional
 Maintainer: Scott Hardin <scott@hnsc.de>
-
 # For Debian Stretch...
 Build-Depends: debhelper (>= 9), cmake, libboost-all-dev, libssl1.0.2, libssl1.0-dev, liblog4cpp5v5, liblog4cpp5-dev, libopus-dev, libprotobuf-dev, protobuf-compiler, pkg-config
-
 # For Ubuntu...
 #Build-Depends: debhelper (>= 9), cmake, libboost-all-dev, libboost-iostreams1.58.0, libboost-log-dev, libboost-log1.58.0, libssl1.0.0, libssl-dev, liblog4cpp5v5, liblog4cpp5-dev, libopus-dev, libprotobuf9v5, libprotobuf-dev, protobuf-compiler, pkg-config
-
 Standards-Version: 3.9.5
 Homepage: http://github.com/mrscotty/mumlib
 #Vcs-Git: git://anonscm.debian.org/collab-maint/mumlib.git
