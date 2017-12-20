@@ -27,7 +27,7 @@ prereqs_debian () {
         liblog4cpp5v5 liblog4cpp5-dev \
         libopus-dev libprotobuf-dev \
         protobuf-compiler pkg-config \
-        git
+        git-core
 }
 
 prereqs_ubuntu () {
