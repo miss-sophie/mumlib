@@ -38,6 +38,7 @@ DEB_PKG=$builddir/mumlib_${upstream_version}-${downstream_version}_$downstream_a
 
 mv $builddir/mumlib_${upstream_version}-${downstream_version}_$downstream_arch.deb .
 
+echo "DEBUG: PWD=$PWD"
 echo "DEBUG: find . -name \*.deb"
 find . -name \*.deb
 
