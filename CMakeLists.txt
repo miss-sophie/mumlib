@@ -65,6 +65,7 @@ install(TARGETS mumlib LIBRARY DESTINATION lib)
 install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib.hpp" DESTINATION include)
 install(FILES
     "${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib/VarInt.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib/enums.hpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib/Callback.hpp"
     DESTINATION include/mumlib)
 
