@@ -28,7 +28,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 include_directories(${LOG4CPP_INCLUDE_DIRS})
 include_directories(include)
 
-set(MUMLIB_PUBLIC_HEADERS include/mumlib.hpp include/mumlib/VarInt.hpp)
+set(MUMLIB_PUBLIC_HEADERS include/mumlib.hpp include/mumlib/VarInt.hpp include/mumlib/Callback.hpp)
 
 set(MUMLIB_PRIVATE_HEADERS
         include/mumlib/Callback.hpp
@@ -61,7 +61,10 @@ target_link_libraries(mumlib_example mumlib)
 
 install(TARGETS mumlib LIBRARY DESTINATION lib)
 install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib.hpp" DESTINATION include)
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib/VarInt.hpp DESTINATION include/mumlib)
+install(FILES
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib/VarInt.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib/Callback.hpp"
+    DESTINATION include/mumlib)
 
 INCLUDE(InstallRequiredSystemLibraries)
 
