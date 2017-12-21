@@ -3,7 +3,7 @@ project(mumlib)
 
 # Version
 set (mumlib_VERSION_MAJOR 0)
-set (mumlib_VERSION_MINOR 2)
+set (mumlib_VERSION_MINOR 3)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 add_definitions(-DOPT_TLS_GNUTLS -D_POSIX_C_SOURCE=200112L)
