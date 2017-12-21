@@ -1,0 +1,6 @@
+mumlib - simple Mumble client library
+Fairy simple Mumble library written in C++, using *boost::asio*
+asynchronous networking framework. Library supports:
+
+* audio streaming through TCP and UDP channel 
+* text messaging

@@ -59,5 +59,28 @@ add_executable(mumlib_example mumlib_example.cpp)
 target_link_libraries(mumlib_example mumlib)
 
 install(TARGETS mumlib LIBRARY DESTINATION lib)
-install(FILES "${PROJECT_BINARY_DIR}/mumlib.h" DESTINATION include)
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib.hpp" ${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib/VarInt.hpp DESTINATION include)
+
+INCLUDE(InstallRequiredSystemLibraries)
+
+SET(CPACK_PACKAGE_NAME "mumlib")
+SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "mumlib")
+SET(CPACK_PACKAGE_VENDOR "Scott Hardin")
+SET(CPACK_PACKAGE_CONTACT "Scott Hardin <mrscotty@github.com>")
+SET(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/Description.txt")
+#SET(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/Copyright.txt")
+SET(CPACK_PACKAGE_VERSION_MAJOR "0")
+SET(CPACK_PACKAGE_VERSION_MINOR "2")
+SET(CPACK_PACKAGE_VERSION_PATCH "0")
+SET(CPACK_PACKAGE_INSTALL_DIRECTORY "CMake $ {Cmake_VERSION_MAJOR}.${CMake_VERSION_MINOR}")
+
+# Debian Package Build
+#SET(CPACK_DEBIAN_PACKAGE_DEPENDS "${shlibs:Depends}, ${misc:Depends}")
+SET(CPACK_DEBIAN_PACKAGE_SECTION "libs")
+SET(CPACK_DEBIAN_PACKAGE_BUILD_DEPENDS "debhelper (>= 9), cmake, libboost-all-dev, libssl1.0.2, libssl1.0-dev, liblog4cpp5v5, liblog4cpp5-dev, libopus-dev, libprotobuf-dev, protobuf-compiler, pkg-config")
+SET(CPACK_GENERATOR "DEB")
+
+INCLUDE(CPack)
+
+
 
