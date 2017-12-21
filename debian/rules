@@ -19,18 +19,19 @@ include /usr/share/dpkg/default.mk
 
 # main packaging script based on dh7 syntax
 %:
+	echo "DEBUG: debian/rules called with target '$@'"
 	dh $@ 
 
 # debmake generated override targets
 # This is example for Cmake (See http://bugs.debian.org/641051 )
-override_dh_auto_configure:
-	mkdir build
-	cd build && cmake -DCMAKE_INSTALL_PREFIX:PATH=$(DESTDIR)/usr ..
+#override_dh_auto_configure:
+#	mkdir build
+#	cd build && cmake -DCMAKE_INSTALL_PREFIX:PATH=$(DESTDIR)/usr ..
 #	dh_auto_configure -- \
 #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
 
-override_dh_auto_build:
-	cd build && make
+#override_dh_auto_build:
+#	cd build && make
 
-override_dh_auto_install:
-	cd build && make install
+#override_dh_auto_install:
+#	cd build && make install
