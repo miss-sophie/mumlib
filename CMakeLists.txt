@@ -4,7 +4,9 @@ project(mumlib)
 # Version
 set (mumlib_VERSION_MAJOR 0)
 set (mumlib_VERSION_MINOR 3)
+if(NOT DEFINED mumlib_VERSION_PATCH)
 set (mumlib_VERSION_PATCH 0)
+endif(NOT DEFINED mumlib_VERSION_PATCH)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 add_definitions(-DOPT_TLS_GNUTLS -D_POSIX_C_SOURCE=200112L)
