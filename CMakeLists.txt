@@ -59,7 +59,8 @@ add_executable(mumlib_example mumlib_example.cpp)
 target_link_libraries(mumlib_example mumlib)
 
 install(TARGETS mumlib LIBRARY DESTINATION lib)
-install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib.hpp" ${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib/VarInt.hpp DESTINATION include)
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib.hpp" DESTINATION include)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/mumlib/VarInt.hpp DESTINATION include/mumlib)
 
 INCLUDE(InstallRequiredSystemLibraries)
 
